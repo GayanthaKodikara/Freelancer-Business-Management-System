@@ -10,7 +10,7 @@ def get_employees():
     cursor.execute("SELECT * FROM employee")
     results = cursor.fetchall()
     cursor.close()
-     #print(results) # print in console
+    #print(results) # print in console
     users = [] # initial blank list
     for row in results: #for loop
         users.append({'id': row[0], 'name': row[1], 'email': row[2]})
