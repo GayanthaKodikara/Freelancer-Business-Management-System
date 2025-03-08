@@ -1,0 +1,3 @@
+use fbms_db;
+-- ALTER TABLE employee ADD email VARCHAR(255) NOT NULL;
+ALTER TABLE employee MODIFY COLUMN emp_id INT NOT NULL AUTO_INCREMENT;
