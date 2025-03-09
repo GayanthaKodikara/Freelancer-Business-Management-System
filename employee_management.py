@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, request
 from connector import get_db_connection
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app) # use for cross origin resource sharing
 
-@app.route('/employees', methods=['GET'])
+@app.route('/employees', methods=['GET']) 
 def get_employees():
     connection = get_db_connection()
     cursor = connection.cursor()
